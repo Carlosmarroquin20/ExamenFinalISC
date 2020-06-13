@@ -82,3 +82,18 @@ class Desk:
             self.message['text'] = '{} {}, Su nombre es impar y tu Apellido es par'.format(name,last)
         else:
             self.message['text'] = '{} {}, Su nombre es impar y tu Apellido es impar'.format(name,last) 
+ #4. Vocales, consonantes
+    def funcion4(self):
+        nr=str(self.p1.get())
+        apd=str(self.op2.get())
+        cuenta = 0
+        for carac in nr:
+            if carac == 'a' or carac =='A' or carac =='e' or carac =='E' or carac =='i' or carac=='I' or carac=='o' or carac=="O" or carac=="u" or carac=="U":
+                cuenta += 1
+        for carac in apd:
+            if carac == 'a' or carac =='A' or carac =='e' or carac =='E' or carac =='i' or carac=='I' or carac=='o' or carac=="O" or carac=="u" or carac=="U":
+                cuenta += 1
+        cud=len(nr)
+        cudd=len(apd)
+        consonante=cud+cudd-cuenta
+        self.message['text'] = 'Su nombre y apellido tienen {} vocales y {} consonantes'.format(cuenta,consonante)
