@@ -97,3 +97,14 @@ class Desk:
         cudd=len(apd)
         consonante=cud+cudd-cuenta
         self.message['text'] = 'Su nombre y apellido tienen {} vocales y {} consonantes'.format(cuenta,consonante)
+#5.inverso
+    def funcion5(self):
+        em=str(self.p1.get())
+        nu=str(self.op2.get())
+        cadena_invertida = ""
+        cadena_invertida1= ""
+        for letra in em:
+            cadena_invertida = letra + cadena_invertida
+        for letra1 in nu:
+            cadena_invertida1 = letra1 + cadena_invertida1
+        self.message['text'] = '{} {}, al reves es: {} {}'.format(em,nu,cadena_invertida,cadena_invertida1)
