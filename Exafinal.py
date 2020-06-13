@@ -34,3 +34,13 @@ class Desk:
         Label(frame, text = 'Mes: ').grid(row = 4, column = 0)
         self.pes4 = Entry(frame)
         self.pes4.grid(row = 4, columnspan = 6)
+        #year
+        Label(frame, text = 'Año: ').grid(row = 5, column = 0)
+        self.pap5 = Entry(frame)
+        self.pap5.grid(row = 5, columnspan = 6)
+        #Colocacion de botones y posicion
+        Button(frame, text = 'Función 1', command = self.funcion1).grid(row = 6, column = 0 , sticky = W + E)
+        Button(frame, text = 'Función 2', command = self.funcion2).grid(row = 6, column = 1 , sticky = W + E)
+        Button(frame, text = 'Función 3', command = self.funcion3).grid(row = 6, column = 2 , sticky = W + E)
+        Button(frame, text = 'Función 4', command = self.funcion4).grid(row = 6, column = 3 , sticky = W + E)
+        Button(frame, text = 'Función 5', command = self.funcion5).grid(row = 6, column = 4 , sticky = W + E)
