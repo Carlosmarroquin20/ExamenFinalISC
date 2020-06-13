@@ -15,7 +15,7 @@ class Desk:
         self.wind.columnconfigure(0, weight=1)
         self.wind.title('EXAMEN ISC')
         #ENTRADA
-        frame = LabelFrame(self.wind, text = 'Bienvenido!!! rellene lo que se le solicita')
+        frame = LabelFrame(self.wind, text = 'Bienvenido!!! rellene lo que se le solicita:')
         frame.grid(row = 0, column = 2, columnspan = 20, pady = 20)
        #NOMBRE DEL USUARIO
         Label(frame, text = 'Nombre: ').grid(row = 1, column = 0)
@@ -67,7 +67,7 @@ class Desk:
         dias_vividos = fecha_de_hoy - fecha_de_nacimiento
         horas = dias_vividos * 24
         hv = horas.days
-        self.message['text'] = 'Usted nacio el: {}/{}/{},su total de horas vividas es {}'.format(day,month,year,hv)   
+        self.message['text'] = 'Usted nacio el: {}/{}/{},su total de horas vividas es: {}'.format(day,month,year,hv)   
 #3. Par o impar
     def funcion3(self):
         name=str(self.p1.get())
@@ -75,13 +75,13 @@ class Desk:
         nr_nombre=int(len(name))
         nr_apellido=int(len(last))
         if nr_nombre%2==0 and nr_apellido %2==0 :
-            self.message['text'] = '{} {}, Su Nombre es par y Su Apellido es par'.format(name,last)
+            self.message['text'] = '{} {}, Su Nombre es par y Su Apellido es par.'.format(name,last)
         elif nr_nombre%2==0 and nr_apellido %2==1:
-            self.message['text'] = '{} {}, Su nombre es par y tu Apellido es impar'.format(name,last)
+            self.message['text'] = '{} {}, Su nombre es par y tu Apellido es impar.'.format(name,last)
         elif nr_nombre%2==1 and nr_apellido %2==0:
-            self.message['text'] = '{} {}, Su nombre es impar y tu Apellido es par'.format(name,last)
+            self.message['text'] = '{} {}, Su nombre es impar y tu Apellido es par.'.format(name,last)
         else:
-            self.message['text'] = '{} {}, Su nombre es impar y tu Apellido es impar'.format(name,last) 
+            self.message['text'] = '{} {}, Su nombre es impar y tu Apellido es impar.'.format(name,last) 
  #4. Vocales, consonantes
     def funcion4(self):
         nr=str(self.p1.get())
@@ -96,7 +96,7 @@ class Desk:
         cud=len(nr)
         cudd=len(apd)
         consonante=cud+cudd-cuenta
-        self.message['text'] = 'Su nombre y apellido tienen {} vocales y {} consonantes'.format(cuenta,consonante)
+        self.message['text'] = 'Su nombre y apellido tienen {} vocales y {} consonantes.'.format(cuenta,consonante)
 #5.inverso
     def funcion5(self):
         em=str(self.p1.get())
