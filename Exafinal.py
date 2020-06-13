@@ -47,3 +47,13 @@ class Desk:
         #Resutado:
         self.message = Label(text = '', fg = 'Black')
         self.message.grid(row = 3, column = 1, columnspan = 2, sticky = W + E)
+
+#1. Letras a numeros Hexadecimales
+    def funcion1(self):
+        day=int(self.pp3.get())
+        month=int(self.pes4.get())
+        year=int(self.pap5.get())
+        hexadecimalday=format(day, 'x')
+        hexadecimalmonth=format(month, 'x')
+        hexadecimalyear=format(year, 'x')
+        self.message['text'] = '{}/{}/{}, Convertido a hexadecimal es: {}/{}/{}'.format(day,month,year,hexadecimalday,hexadecimalmonth,hexadecimalyear)
