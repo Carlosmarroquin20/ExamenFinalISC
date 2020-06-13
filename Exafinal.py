@@ -57,3 +57,14 @@ class Desk:
         hexadecimalmonth=format(month, 'x')
         hexadecimalyear=format(year, 'x')
         self.message['text'] = '{}/{}/{}, Convertido a hexadecimal es: {}/{}/{}'.format(day,month,year,hexadecimalday,hexadecimalmonth,hexadecimalyear)
+#2. HOras
+    def funcion2(self):   
+        day=int(self.pp3.get())
+        month=int(self.pes4.get())
+        year=int(self.pap5.get())
+        fecha_de_nacimiento = datetime.datetime(year, month, day)
+        fecha_de_hoy = datetime.datetime.now()
+        dias_vividos = fecha_de_hoy - fecha_de_nacimiento
+        horas = dias_vividos * 24
+        hv = horas.days
+        self.message['text'] = 'Usted nacio el: {}/{}/{},su total de horas vividas es {}'.format(day,month,year,hv)   
